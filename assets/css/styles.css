@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import 'variables.css';
+
+/* Resets */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+button {
+    all: unset;
+}
+
+/* Base styles */
+
+body {
+    background-color: var(--Light-Grayish-Blue);
+
+    font-size: 13px;
+    font-family: 'Manrope';
+
+    margin: 20% 5%;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+/* Main container */
+
+main {
+    background-color: white;
+    
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 10px;
+}
+
+/* Image section */
+
+.image-section {
+    overflow: hidden;
+    flex-grow: 0 0 40%;
+}
+
+.image-section img {
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    max-width: 100%;;
+    max-height: 50vh;
+}
+
+/* Text section */
+
+.text-section {
+    background: white;
+    padding: 8% 9%;
+    flex-grow: 0 0 60%;
+    position: relative;
+    margin-top: -15%;
+    border-radius: 0 0 10px 10px;
+}
+
+.text-section .article-header {
+    font-size: 1.53846em;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0.25px;
+    margin-bottom: 12px;
+
+    color: var(--Very-Dark-Grayish-Blue);
+}
+
+.text-section .article-description {
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.12px;
+    margin-bottom: 32px;
+
+    color: var(--Desaturated-Dark-Blue);
+}
+
+.article-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+.user .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+
+.user .user-name {
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.12px;
+    color: var(--Very-Dark-Grayish-Blue);
+}
+
+.user .user-postdate {
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.12px;
+    color: var(--Grayish-Blue);
+}
+
+.share-button {
+    background-color: var(--Light-Grayish-Blue);
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    display: flex;
+}
+
+.share-button .share-icon {
+    padding: 9px;
+}
+
