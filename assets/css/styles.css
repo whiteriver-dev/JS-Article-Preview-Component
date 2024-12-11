@@ -29,6 +29,10 @@ body {
     align-content: center;
 }
 
+.hidden {
+    display: none;
+}
+
 /* Main container */
 
 main {
@@ -40,7 +44,7 @@ main {
     border-radius: 10px;
 }
 
-/* Image section */
+/* IMAGE SECTION */
 
 .image-section {
     overflow: hidden;
@@ -50,15 +54,15 @@ main {
 .image-section img {
     border-radius: 10px 10px 0 0;
     width: 100%;
-    max-width: 100%;;
+    max-width: 100%;
     max-height: 50vh;
 }
 
-/* Text section */
+/* TEXT SECTION */
 
 .text-section {
     background: white;
-    padding: 8% 9%;
+    padding: 8% 9% 0 9%;
     flex-grow: 0 0 60%;
     position: relative;
     margin-top: -15%;
@@ -66,9 +70,9 @@ main {
 }
 
 .text-section .article-header {
-    font-size: 1.53846em;
+    font-size: 1rem;
     font-weight: 700;
-    line-height: 28px;
+    line-height: 24px;
     letter-spacing: 0.25px;
     margin-bottom: 12px;
 
@@ -76,7 +80,7 @@ main {
 }
 
 .text-section .article-description {
-    font-size: 1em;
+    font-size: 0.8rem;
     font-weight: 500;
     line-height: 20px;
     letter-spacing: 0.12px;
@@ -85,19 +89,35 @@ main {
     color: var(--Desaturated-Dark-Blue);
 }
 
+/* FOOTER SECTION */
+
+.footer {
+    padding: 1rem 2rem;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+    min-height: 72px;
+    align-content: center;
+}
+
+.dark-grey-background {
+    background-color: var(--Very-Dark-Grayish-Blue);
+}
+
+
+
+/* Default footer */
 
 .article-footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: var(--Very-Dark-Grayish-Blue);
 }
 
 .user {
     display: flex;
     flex-direction: row;
     align-content: center;
-    display: none;
 }
 
 .user .user-avatar {
@@ -123,6 +143,30 @@ main {
     color: var(--Grayish-Blue);
 }
 
+/* Activated Share Footer */
+
+.share-container {
+    display: none;
+    align-items: center;
+}
+
+.share-label {
+    color: var(--Grayish-Blue);
+    font-size: 1em;
+    line-height: 20px;
+    letter-spacing: 5px;
+    font-weight: 500;
+    margin-right: 22px;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Share button */
+
 .share-button {
     display: flex;
     justify-content: center;
@@ -147,18 +191,6 @@ main {
 .share-button:hover svg {
     fill: white;
     transition: fill 0.3s;
-}
-
-.share-container {
-    display: flex;
-    align-items: center;
-
-    font-size: 1em;
-    line-height: 20px;
-    letter-spacing: 5px;
-    font-weight: 500;
-
-    color: var(--Light-Grayish-Blue)
 }
 
 
