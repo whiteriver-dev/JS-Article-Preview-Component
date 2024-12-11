@@ -85,16 +85,19 @@ main {
     color: var(--Desaturated-Dark-Blue);
 }
 
+
 .article-footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background-color: var(--Very-Dark-Grayish-Blue);
 }
 
 .user {
     display: flex;
     flex-direction: row;
     align-content: center;
+    display: none;
 }
 
 .user .user-avatar {
@@ -121,14 +124,44 @@ main {
 }
 
 .share-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     background-color: var(--Light-Grayish-Blue);
     height: 32px;
     width: 32px;
     border-radius: 50%;
-    display: flex;
+    cursor: pointer;
 }
 
-.share-button .share-icon {
-    padding: 9px;
+.share-button svg {
+    fill: var(--Desaturated-Dark-Blue);
 }
+
+.share-button:hover {
+    background-color: var(--Grayish-Blue);
+    transition: background-color 0.3s;
+}
+
+.share-button:hover svg {
+    fill: white;
+    transition: fill 0.3s;
+}
+
+.share-container {
+    display: flex;
+    align-items: center;
+
+    font-size: 1em;
+    line-height: 20px;
+    letter-spacing: 5px;
+    font-weight: 500;
+
+    color: var(--Light-Grayish-Blue)
+}
+
+
+
+
 
