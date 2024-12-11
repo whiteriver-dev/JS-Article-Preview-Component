@@ -8,10 +8,12 @@ shareButton.addEventListener('click', () => {
         userContainer.style.display = 'none';
         shareContainer.style.display = 'flex';
         footer.classList.add('dark-grey-background');
+        shareButton.classList.add('active');
     }
     else {
         shareContainer.style.display = 'none';
         footer.classList.remove('dark-grey-background');
+        shareButton.classList.remove('active');
         userContainer.style.display = 'flex';
     }
 })

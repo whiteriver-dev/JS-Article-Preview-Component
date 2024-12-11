@@ -12,6 +12,7 @@
 
 button {
     all: unset;
+    -webkit-tap-highlight-color: transparent;
 }
 
 /* Base styles */
@@ -112,6 +113,7 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-content: center;
 }
 
 .user {
@@ -148,6 +150,7 @@ main {
 .share-container {
     display: none;
     align-items: center;
+    height: 40px;
 }
 
 .share-label {
@@ -172,6 +175,7 @@ main {
     justify-content: center;
     align-items: center;
 
+    transition: background-color 0.3s;
     background-color: var(--Light-Grayish-Blue);
     height: 32px;
     width: 32px;
@@ -180,8 +184,19 @@ main {
 }
 
 .share-button svg {
+    transition: fill 0.3s;
     fill: var(--Desaturated-Dark-Blue);
 }
+
+.share-button.active {
+    background-color: var(--Grayish-Blue); /* Change background color */
+}
+
+.share-button.active svg {
+    fill: white; /* Change fill color */
+}
+
+/* SAVE FOR DEKSTOP VERSION
 
 .share-button:hover {
     background-color: var(--Grayish-Blue);
@@ -192,6 +207,8 @@ main {
     fill: white;
     transition: fill 0.3s;
 }
+
+*/
 
 
 
