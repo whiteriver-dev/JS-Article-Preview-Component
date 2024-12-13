@@ -206,37 +206,56 @@ main {
 @media (min-width: 768px) {
 
 
-    body {
-        
-    }
-
-
     /* MAIN CONTAINER */
 
     main {
         flex-direction: row;
-        height: 100%;
+        width: 100%;
+        max-width: 730px;
+        max-height: 280px;
+    }
+
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        padding: 30px 40px;
+        justify-content: center;
+        margin: 0;
+
+        flex: 0 0 60%;
     }
 
 
     /* IMAGE SECTION */
 
     .image-section {
-        overflow: hidden;
+        display: flex;
+        flex: 0 0 40%;
     }
-    
+
+
     .image-section img {
         border-radius: 10px 0 0 10px;
+        height: 100%;
+        object-fit: cover;
+        object-position: left;
+
     }
 
     /* TEXT SECTION */
 
     .text-section {
-        flex: auto;
+        margin-top: 0;
     }
 
-}
+    .text-section .articleheader, .text-section .article-description {
+        margin: 0;
+    }
 
+    .text-section, .footer {
+        padding: 0;
+    }
+}
 /* SAVE FOR DEKSTOP VERSION
 
 .share-button:hover {
