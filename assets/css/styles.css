@@ -17,6 +17,11 @@ button {
 
 /* Base styles */
 
+html {
+    height: 100%;
+    align-content: center;
+}
+
 body {
     background-color: var(--Light-Grayish-Blue);
 
@@ -194,6 +199,42 @@ main {
 
 .share-button.active svg {
     fill: white; /* Change fill color */
+}
+
+/* TABLET and DESKTOP designs */
+
+@media (min-width: 768px) {
+
+
+    body {
+        
+    }
+
+
+    /* MAIN CONTAINER */
+
+    main {
+        flex-direction: row;
+        height: 100%;
+    }
+
+
+    /* IMAGE SECTION */
+
+    .image-section {
+        overflow: hidden;
+    }
+    
+    .image-section img {
+        border-radius: 10px 0 0 10px;
+    }
+
+    /* TEXT SECTION */
+
+    .text-section {
+        flex: auto;
+    }
+
 }
 
 /* SAVE FOR DEKSTOP VERSION
