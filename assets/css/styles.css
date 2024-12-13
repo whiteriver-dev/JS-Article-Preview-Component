@@ -255,21 +255,29 @@ main {
     .text-section, .footer {
         padding: 0;
     }
+
+    /* Share Button DESKTOP SPECIFIC */
+
+    .share-button:hover {
+        background-color: var(--Grayish-Blue);
+        transition: background-color 0.3s;
+    }
+    
+    .share-button:hover svg {
+        fill: white;
+        transition: fill 0.3s;
+    }
 }
-/* SAVE FOR DEKSTOP VERSION
 
-.share-button:hover {
-    background-color: var(--Grayish-Blue);
-    transition: background-color 0.3s;
+@media (min-width: 1024px) {
+
+    /* Gap issue on tablet fixed */
+    
+    .content-container {
+        gap: 20px;
+    }
+
 }
-
-.share-button:hover svg {
-    fill: white;
-    transition: fill 0.3s;
-}
-
-*/
-
 
 
 
