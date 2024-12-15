@@ -54,7 +54,6 @@ main {
 
 .image-section {
     overflow: hidden;
-    flex-grow: 0 0 40%;
 }
 
 .image-section img {
