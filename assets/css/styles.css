@@ -35,10 +35,6 @@ body {
     align-content: center;
 }
 
-.hidden {
-    display: none;
-}
-
 /* Main container */
 
 main {
@@ -220,6 +216,7 @@ main {
         padding: 30px 40px;
         justify-content: center;
         margin: 0;
+        gap: 20px;
 
         flex: 0 0 60%;
     }
@@ -266,16 +263,40 @@ main {
         fill: white;
         transition: fill 0.3s;
     }
-}
 
-@media (min-width: 1024px) {
+    /* Making the Share container above button on DESKTOP */
 
-    /* Gap issue on tablet fixed */
-    
-    .content-container {
-        gap: 20px;
+    .user {
+        display: flex;
     }
 
+    .footer {
+        background-color: white;
+    }
+
+    .article-footer {
+        position: relative;
+    }
+
+    .share-container {
+        position: absolute;
+        padding: 1.7rem 2.5rem;
+        transform: translateX(80%) translateY(-170%);
+        border-radius: 10px;;
+        background-color: var(--Very-Dark-Grayish-Blue);
+        z-index: 1000;
+    }
+
+    .share-container::after {
+        content: '';
+        position: absolute;
+        top: 99%; 
+        left: 50%; 
+        transform: translateX(-50%);
+        border-width: 12px; 
+        border-style: solid; 
+        border-color: var(--Very-Dark-Grayish-Blue) transparent transparent transparent;
+    }
 }
 
 
