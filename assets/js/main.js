@@ -34,11 +34,19 @@ shareButton.addEventListener('click', () => {
     }
 })
 
+
+// This logic hides the Desktop style share container if screen is resized to Mobile dimensions
 function checkScreenSize() {
     if (window.innerWidth < 768 && shareContainer.style.display !== 'none') {
         shareContainer.style.display = 'none';
         shareButton.classList.remove('active');
     }
+
+    else if (window.innerWidth > 768 && shareContainer.style.display !== 'none')
+        shareContainer.style.display = 'none';
+        shareButton.classList.remove('active');
+        userContainer.style.display = 'flex';
+        footer.classList.remove('dark-grey-background');
 }
 
 window.addEventListener('resize', checkScreenSize)

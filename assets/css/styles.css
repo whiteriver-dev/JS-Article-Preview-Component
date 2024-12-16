@@ -168,6 +168,11 @@ main {
     gap: 16px;
 }
 
+.share-icons:hover path {
+    fill: var(--Grayish-Blue);
+    transition: fill 0.3s;
+}
+
 /* Share button */
 
 .share-button {
@@ -252,7 +257,7 @@ main {
         padding: 0;
     }
 
-    /* Share Button DESKTOP SPECIFIC */
+    /* Share Button and icons DESKTOP SPECIFIC */
 
     .share-button:hover {
         background-color: var(--Grayish-Blue);
@@ -263,6 +268,7 @@ main {
         fill: white;
         transition: fill 0.3s;
     }
+
 
     /* Making the Share container above button on DESKTOP */
 
