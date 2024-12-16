@@ -13,6 +13,7 @@ shareButton.addEventListener('click', () => {
                 shareContainer.style.display = 'flex';
                 footer.classList.add('dark-grey-background');
                 shareButton.classList.add('active');
+
             }
             else {
                 shareContainer.style.display = 'none';
@@ -22,35 +23,38 @@ shareButton.addEventListener('click', () => {
             }
     }
     else {
-
-            if(shareContainer.style.display !== 'none') {
-                shareContainer.style.display = 'none';
-                shareButton.classList.remove('active');
-            }
-            else {
+            if(shareContainer.style.display == 'none') {
                 shareContainer.style.display = 'flex';
                 shareButton.classList.add('active');
+            }
+            else {
+                shareContainer.style.display = 'none';
+                shareButton.classList.remove('active');
             }
     }
 })
 
-
-// This logic hides the Desktop style share container if screen is resized to Mobile dimensions
+// This logic allows user to resize - while the share-container state stays the same among different screen sizes
 function checkScreenSize() {
-    if (window.innerWidth < 768 && shareContainer.style.display !== 'none') {
-        shareContainer.style.display = 'none';
-        shareButton.classList.remove('active');
-    }
-
-    else if (window.innerWidth > 768 && shareContainer.style.display !== 'none')
-        shareContainer.style.display = 'none';
-        shareButton.classList.remove('active');
+    if (window.innerWidth > 768) {
         userContainer.style.display = 'flex';
         footer.classList.remove('dark-grey-background');
+    }
+
+    if (window.innerWidth < 768 && shareContainer.style.display == 'flex' && userContainer.style.display == 'flex') {
+        userContainer.style.display = 'none'; 
+        footer.classList.add('dark-grey-background');
+    }
+
+    if (window.innerWidth < 768 && shareContainer.style.display == 'none' && userContainer.style.display == 'none') {
+        userContainer.style.display = 'flex';
+        shareContainer.style.display = 'none';
+        shareButton.classList.remove('active')
+    }
+
 }
 
 window.addEventListener('resize', checkScreenSize)
-
 
 
 
