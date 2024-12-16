@@ -23,7 +23,7 @@ shareButton.addEventListener('click', () => {
             }
     }
     else {
-            if(shareContainer.style.display == 'none') {
+            if(shareContainer.style.display !== 'flex') {
                 shareContainer.style.display = 'flex';
                 shareButton.classList.add('active');
             }
@@ -34,7 +34,7 @@ shareButton.addEventListener('click', () => {
     }
 })
 
-// This logic allows user to resize - while the share-container state stays the same among different screen sizes
+// This logic allows user to resize - while the share-container state stays the same among different
 function checkScreenSize() {
     if (window.innerWidth > 768) {
         userContainer.style.display = 'flex';
